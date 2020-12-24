@@ -21,6 +21,7 @@ pipeline {
         sh "cd /home/ubuntu/workspace/angular ; sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - "
         sh "cd /home/ubuntu/workspace/angular ; sudo apt-get install nodejs "
         sh "cd /home/ubuntu/workspace/angular ; sudo npm install -g @angular/cli@11.0.0 -y"
+        sh "cd /home/ubuntu/workspace/angular ; sudo npm install --save-dev @angular-devkit/build-angular"
         sh "cd /home/ubuntu/workspace/angular ; sudo ng build "
         sh "sudo ansible-playbook /root/nginx.yml"
        }
